@@ -15,4 +15,4 @@ class Handler(tornado.web.RequestHandler):
     def get(self):
         p = self.request.path
 
-        self.render("roulette.html")
+        self.render("Roulette.html")
