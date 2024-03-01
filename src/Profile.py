@@ -49,7 +49,7 @@ class Handler(tornado.web.RequestHandler):
         email = accountData [username]["email"]
         profPic = accountData [username]["image"]
 
-        self.render("profile.html",
+        self.render("Profile.html",
                     realName = realName,
                     birthDate = birthDate,
                     email = email,
