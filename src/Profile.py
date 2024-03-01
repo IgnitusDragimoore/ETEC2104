@@ -36,7 +36,7 @@ class Handler(tornado.web.RequestHandler):
         birthDate = accountData [username]["dateOfBirth"]
         email = accountData [username]["email"]
 
-        self.render("profile.html",
+        self.render("Profile.html",
                     realName = realName,
                     birthDate = birthDate,
                     email = email
