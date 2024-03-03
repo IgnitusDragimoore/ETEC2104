@@ -1,6 +1,7 @@
 import asyncio
 import os, os.path
 import tornado.web
+import Sock
 import Index, Quote, TemplateTest, Profile, Roulette
 
 HTMLDIR = os.path.abspath(
@@ -10,6 +11,11 @@ HTMLDIR = os.path.abspath(
     )
 )
 
+class IndexPage(tornado.web.RequestHandler):
+    def get(self):
+        self.write("<a href='/roulette.html'>The Casino is Live!</a>")
+
+
 def makeApp():
     endpoints=[
         ("/",Index.Handler),
@@ -17,6 +23,7 @@ def makeApp():
         ("/fancy",TemplateTest.Handler),
         ("/profile/.*",Profile.Handler),
         ("/roulette",Roulette.Handler),
+        ("/sock",Sock.Handler)
     ]
     app = tornado.web.Application(
         endpoints,
