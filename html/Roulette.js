@@ -9,7 +9,7 @@ let randNum = num[i];
 
 console.log(randNum);
 
-if (i % 2 == 0){
+if (randNum % 2 == 0){
     console.log("Noir!")
 }
 else{
